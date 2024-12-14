@@ -1,0 +1,22 @@
+#后端服务端口
+server:
+  port: 8081
+
+spring:
+  #数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/DB_flower?characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
+mybatis:
+  type-aliases-package: com.shanzhu.flower.entity
+
+#图片上传路径 图片所在的路径位置
+uploadPath: D:\my_ZJU\BS\flower\flower-frontend\static\imgs\
